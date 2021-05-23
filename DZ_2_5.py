@@ -14,7 +14,22 @@ a_list = [45, 20, 15, 5, 5, 4, 1]
 
 x = int(input(print('Введите целое число')))
 
-a_list.append(x)
-a_list.sort(reverse=True)
+if x > a_list[0]:
+    a_list.insert(0, x)
+elif x < a_list[-1]:
+    a_list.append(x)
+else:
+    for el in a_list:
+        el_index = a_list.index(el)
+        if x > el:
+            a_list.insert(el_index, x)
+            break
+        elif x == el:
+            el_count = a_list.count(el)
+            el_index = el_index + el_count
+            a_list.insert(el_index, x)
+            break
+        else:
+            continue
 
 print(a_list)

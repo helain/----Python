@@ -5,7 +5,7 @@
 Если в слово длинное, выводить только первые 10 букв в слове.
 """
 
-a_list = input(print('Введите слова через продел')).split()
+a_list = input(print('Введите слова через пробел')).split()
 
 for i, el in enumerate(a_list, 1):
     if len(el) > 10:
