@@ -27,30 +27,40 @@
 goods = []
 good = []
 good_dict = {}
-i = 1
 new_entry = 'y'
 analys_dict = {}
 analys_list = []
+n=1
+i = int(input(print('Введите количество товаров: ')))
 
-while new_entry == 'y':
-    good.append(i)
-    print('Введите название товара')
-    good_dict['название'] = input()
-    print('Введите цену товара')
-    good_dict['цена'] = input()
-    print('Введите количество товара')
-    good_dict['количество'] = input()
-    print('Введите единицу измерения товара')
-    good_dict['ед.'] = input()
-    good.append(good_dict)
+while n <= i:
+    good_dict['название']=input(print('Введите название товара: '))
+    good_dict['цена']=input(print('Введите цену товара: '))
+    good_dict['количество']=input(print('Введите количество товара'))
+    good_dict['ед']=input(print('Введите единицы измирения'))
+    good.append(n)
+    good.append(good_dict.copy())
     goods.append(tuple(good))
+    n += 1
     good.clear()
-    i += 1
-    new_entry = (input(print('Добавить еще один товар?(y/n)')))
 
+
+
+print ('Итоговый список:')
 print(goods)
+"""
+goods = [
+(1, {'название':'компьютер', 'цена':20000, 'количество':5, 'eд':'шт'}),
+(2, {'название': 'принтер', 'цена': 6000, 'количество': 2, 'eд': 'шт'}),
+(3, {'название': 'сканер', 'цена': 2000, 'количество': 7, 'eд': 'шт'})
+]
+"""
 
-for el in goods:
-    a = el[1]
-    print(a)
+for number, good_dict in goods:
+    for key, value in good_dict.items():
+        analys_list = analys_dict.get(key, [])
+        if value not in analys_list:
+            analys_list.append(value)
+        analys_dict[key] = analys_list
 
+print(analys_dict)
