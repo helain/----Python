@@ -6,8 +6,10 @@
 from sys import argv
 
 script_name, hours, payment_per_hour, bonus = argv
+try:
+    month_payment = int(payment_per_hour) * int(hours) + int(bonus)
+    print('Зарплата за месяц')
+    print(month_payment)
+except:
+    print('Введены неверные значения')
 
-month_payment = int(payment_per_hour) * int(hours) + int(bonus)
-
-print('Зарплата за месяц')
-print(month_payment)
