@@ -5,9 +5,9 @@
 """
 from sys import argv
 
-hours, payment_per_hour, bonus = argv
-hours
-month_payment = payment_per_hour * hours + bonus
+script_name, hours, payment_per_hour, bonus = argv
+
+month_payment = int(payment_per_hour) * int(hours) + int(bonus)
 
 print('Зарплата за месяц')
 print(month_payment)
