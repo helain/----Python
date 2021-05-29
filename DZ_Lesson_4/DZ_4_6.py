@@ -26,11 +26,11 @@ for i in itertools.count(start_count):
 """второе задание"""
 a = int(input(print('Введите количество выводов: ')))
 user_list = [1, 2, 3, 4]
-count = 0
+repeat = 0
 
 for el in itertools.cycle(user_list):
-    if count < a:
+    if repeat < a:
         print(el)
-        count += 1
+        repeat += 1
     else:
         break
