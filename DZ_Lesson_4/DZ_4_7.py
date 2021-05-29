@@ -8,19 +8,17 @@
 Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24.
 """
 from math import factorial
-from itertools import count
 
 
 def fact(i):
-    step = 0
-    while step != i:
+    step = 1
+    while step <= i:
         x = factorial(step)
         step += 1
         yield x
 
 
-n = int(input(print('Введите число: ')))
+n = int(input('Введите число: '))
 
 for el in fact(n):
-    print(next(fact(n)))
-
+    print(el)
