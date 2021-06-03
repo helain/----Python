@@ -11,7 +11,6 @@
 Пример словаря:
 {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
 """
-from typing import Dict, Any
 
 result_dict = {}
 
@@ -23,6 +22,3 @@ with open('DZ_5_6_example.txt', encoding='utf8') as user_lessons:
         result_dict.update({lesson_name: sum(overall_lessons)})
 
 print(result_dict)
-
-
-
