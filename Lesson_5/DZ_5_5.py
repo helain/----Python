@@ -12,4 +12,5 @@ with open('DZ_5_5_example.txt') as user_numbers:
         user_sum = 0
         for i in numbers:
             user_sum += int(i)
+        print('Сумма')
         print(user_sum)
